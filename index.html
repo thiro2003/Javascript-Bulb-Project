@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <style>
+    body{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .main{
+      width:100vw;
+      height:100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: #424242;
+    }
+    #bulb{
+      width:500px;
+      height: 700px;
+      
+    }
+    .btn{
+      width:700px;
+      height: 200px;
+      border:none;
+      border-radius: 30px;
+      background: #2c1a1a;
+      font-size: 3.3rem;
+      color:white;
+      margin-top:40px;
+      cursor: pointer;
+    } -->
+  </style>
+</head>
+<body>
+  <div class="main">
+      <img id="bulb"src="pic_bulboff.gif" alt="">
+      <button onclick="myfun()"class="btn">Turn on bulb</button>
+  </div>
+  <script>
+
+    // Designing body
+    body=document.getElementsByTagName('body')[0]
+    body.style.padding="0px";
+    body.style.margin="0px";
+    body.style.boxSizing="border-box";
+    // designing main
+    main=document.getElementsByClassName("main")[0]
+    main.style.width="100vw";
+    main.style.height="100vh";
+    main.style.backgroundColor = "#242424";
+    main.style.display="flex";
+    main.style.alignItems="center";
+    main.style.justifyContent="center";
+    main.style.flexDirection="column";
+    //designing bulb
+    bulb=document.getElementById('bulb')
+    bulb.style.width='500px';
+    bulb.style.height='700px';
+    // designing btn
+    btn=document.getElementsByClassName('btn')[0]
+    btn.style.height='200px';
+    btn.style.width='700px';
+    btn.style.fontSize='3.3rem';
+    btn.style.cursor='pointer';
+    btn.style.margin='200px';
+    btn.style.borderRadius='200px';
+    btn.style.backgroundColor='#212121';
+    btn.style.border='1px solid white';
+    btn.style.color='white';
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    function myfun(){
+      img=document.getElementById("bulb").src
+      if(img=="http://127.0.0.1:5500/pic_bulboff.gif"){
+
+                  document.getElementsByClassName("btn")[0].innerHTML = "Turn on bulb";
+                  let img=document.getElementById("bulb");
+                  img.src='pic_bulbon.gif';
+                
+
+
+      }
+      else{
+              document.getElementsByClassName("btn")[0].innerHTML = "Turn off bulb";
+              img=document.getElementById("bulb").src='pic_bulboff.gif';
+              
+              
+      }
+      
+    }
+
+  </script>
+  
+</body>
+</html>
